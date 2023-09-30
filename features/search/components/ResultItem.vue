@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ResultItem } from '@/api/search'
+import { ResultItem } from '@/types/search'
 
 const props = defineProps<{
   item: ResultItem,
@@ -9,10 +9,11 @@ const props = defineProps<{
 <template>
   <div>
     <a :href="item.link" target="_blank">
-    <h3>{{ item.title }}</h3>
-    <p>{{ item.snippet }}</p>
-    <p><img :src="item.pagemap.cse_thumbnail[0].src"></p>
-    <p>{{ item.displayLink }}</p>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.snippet }}</p>
+      <p><img :src="item.pagemap.cse_thumbnail[0].src"></p>
+      <p>{{ item.displayLink }}</p>
+      <p><button>read after</button></p>
     </a>
   </div>
 </template>
