@@ -1,5 +1,5 @@
 import { Recipe } from "types/recipes";
-import { db } from "../db";
+import { db } from "./db";
 
 type Pagination = {
   offset: number,
