@@ -1,4 +1,5 @@
 export interface Recipe {
+  cacheId: string,
   title: string,
   link: string,
   displayLink: string,

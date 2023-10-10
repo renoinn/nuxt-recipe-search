@@ -4,9 +4,9 @@ import { useQuery, useSearchResult } from '@/features/search/state'
 
 const query = useQuery()
 const searchResult = useSearchResult()
-  
+
 const handleClick = async () => {
-  const result = await searchRequest(query.value);
+  const result = await searchRequest(query.value)
   searchResult.value = result
 };
 </script>
