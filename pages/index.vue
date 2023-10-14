@@ -5,7 +5,7 @@ import SearchForm from '@/features/search/components/SearchForm.vue'
 
 <template>
   <div>
-    <search-form class="mx-auto my-7 text-center" />
-    <result-list />
+    <SearchForm class="mx-auto my-7 text-center" />
+    <ResultList />
   </div>
 </template>

@@ -13,7 +13,7 @@ const props = defineProps<{
       <p>{{ item.snippet }}</p>
       <p><img :src="item.thumbnail_src"></p>
       <p>{{ item.displayLink }}</p>
-      <p><button>read after</button></p>
+      <p><button>delete</button></p>
     </a>
   </div>
 </template>
