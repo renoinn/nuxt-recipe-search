@@ -7,5 +7,13 @@
       <li>Coockpad</li>
       <li>etc.</li>
     </ul>
+    <ul>
+      <li>
+        <NuxtLink to="/about/privacy">プライバシーポリシー</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/about/term">利用規約</NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
