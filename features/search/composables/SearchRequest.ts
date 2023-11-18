@@ -1,10 +1,6 @@
 import { SearchRequest, SearchResponse } from '@/types/search'
 import { Recipe } from '@/types/recipes'
 
-const domain = {
-  api: ''
-}
-
 export const searchRequest = async (query: string): Promise<Recipe[] | null> => {
   const params: SearchRequest = {
     q: query,
@@ -12,13 +8,15 @@ export const searchRequest = async (query: string): Promise<Recipe[] | null> => 
     num: 10,
   }
 
+  const domain = useRuntimeConfig().SEARCH_API_DOMAIN
   const data = await useAsyncData(
     'recipe',
-    () => $fetch<SearchResponse>(`https://${domain.api}/search`, { params: params })
+    () => $fetch<SearchResponse>(`https://${domain}/search`, { params: params })
   )
 
   return data.data.value?.items.map((item) => {
     const recipe: Recipe = {
+      cacheId: item.cacheId,
       title: item.title,
       link: item.link,
       displayLink: item.displayLink,
