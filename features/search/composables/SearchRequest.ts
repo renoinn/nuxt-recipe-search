@@ -8,7 +8,8 @@ export const searchRequest = async (query: string): Promise<Recipe[] | null> => 
     num: 10,
   }
 
-  const domain = useRuntimeConfig().SEARCH_API_DOMAIN
+  const config = useRuntimeConfig()
+  const domain = config.public.searchApiDomain
   const data = await useAsyncData(
     'recipe',
     () => $fetch<SearchResponse>(`https://${domain}/search`, { params: params })

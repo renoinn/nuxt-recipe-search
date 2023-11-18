@@ -1,4 +1,4 @@
-import { Recipe } from "types/recipes";
+import type { Recipe } from "@/types/recipes";
 import { db } from "./db";
 import Dexie from "dexie";
 
